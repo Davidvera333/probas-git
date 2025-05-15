@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="estilo.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
 <body>
@@ -27,48 +27,47 @@
         </ul>
     </header>
     <main class="container mt-5">
-    <form action="datosrecibidos.php" method="POST" class="needs-validation" novalidate>
-        <h1 class="mb-4">Formulario de Contacto</h1>
+        <form action="datosrecibidos.php" method="POST" class="needs-validation" novalidate>
+            <h1 class="mb-4">Formulario de Contacto</h1>
 
-        <div class="mb-3">
-            <label for="nombre" class="form-label">Nombre:</label>
-            <input type="text" class="form-control" id="nombre" name="nombre" required>
-            <div class="invalid-feedback">
-                Por favor ingrese su nombre
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                <div class="invalid-feedback">
+                    Por favor ingrese su nombre
+                </div>
             </div>
-        </div>
 
-        <div class="mb-3">
-            <label for="email" class="form-label">Email:</label>
-            <input type="email" class="form-control" id="email" name="email" 
-                   placeholder="correo@ejemplo.com" required>
-            <div class="invalid-feedback">
-                Por favor ingrese un email válido
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="correo@ejemplo.com"
+                    required>
+                <div class="invalid-feedback">
+                    Por favor ingrese un email válido
+                </div>
             </div>
-        </div>
 
-        <div class="mb-3">
-            <label for="asunto" class="form-label">Asunto:</label>
-            <input type="text" class="form-control" id="asunto" name="asunto" required>
-            <div class="invalid-feedback">
-                Por favor ingrese el asunto
+            <div class="mb-3">
+                <label for="asunto" class="form-label">Asunto:</label>
+                <input type="text" class="form-control" id="asunto" name="asunto" required>
+                <div class="invalid-feedback">
+                    Por favor ingrese el asunto
+                </div>
             </div>
-        </div>
 
-        <div class="mb-3">
-            <label for="mensaje" class="form-label">Mensaje:</label>
-            <textarea class="form-control" id="mensaje" name="mensaje" 
-                      rows="4" required></textarea>
-            <div class="invalid-feedback">
-                Por favor ingrese su mensaje
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje:</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
+                <div class="invalid-feedback">
+                    Por favor ingrese su mensaje
+                </div>
             </div>
-        </div>
 
-        <div class="d-grid gap-2">
-            <button class="btn btn-primary" type="submit">Enviar</button>
-        </div>
-    </form>
-</main>
+            <div class="d-grid gap-2">
+                <button class="btn btn-primary" type="submit">Enviar</button>
+            </div>
+        </form>
+    </main>
 </body>
 <script>
     // JavaScript para la validación del formulario
@@ -91,10 +90,10 @@
                             title: 'Formulario enviado',
                             text: 'Gracias por su mensaje.',
                             confirmButtonText: 'Aceptar',
-                            timer: 3000, // 3 segundos de espera
+                            timer: 1700, // 3 segundos de espera
                             timerProgressBar: true // Muestra una barra de progreso
                         });
-                        
+
                         // Enviamos el formulario después del mensaje
                         setTimeout(() => {
                             form.submit();
