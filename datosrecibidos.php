@@ -8,7 +8,15 @@
 </head>
 
 <body>
-    <h1>Los datos enviados han sido recibidos correctamente , Bienvenido!</h1>
+    <h1>Los datos enviados han sido recibidos correctamente, ¡Bienvenido!</h1>
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['email'])) {
+        $email = htmlspecialchars($_POST['email']);
+        echo "<p>El correo recibido es: <strong>$email</strong></p>";
+    } else {
+        echo "<p>No se recibió ningún correo.</p>";
+    }
+    ?>
 </body>
 <style>
     h1 {
