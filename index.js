@@ -29,8 +29,8 @@ window.addEventListener('load', function() {
 
                     // Esperar 2 segundos antes de redireccionar
                     setTimeout(() => {
-                        window.location.href = 'index.html'; // Cambia esto por la URL a la que quieres redireccionar
-                    }, 2000);
+                        window.location.href = 'datosrecibidos.html'; // Cambia esto por la URL a la que quieres redireccionar
+                    }, 200);
                 }, false)
             })
     })()
