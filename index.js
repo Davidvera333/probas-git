@@ -26,11 +26,6 @@ window.addEventListener('load', function() {
                         timer: 2000, // El alert se cerrará automáticamente después de 2 segundos
                         timerProgressBar: true // Muestra una barra de progreso
                     });
-
-                    // Esperar 2 segundos antes de redireccionar
-                    setTimeout(() => {
-                        window.location.href = 'datosrecibidos.php'; // Cambia esto por la URL a la que quieres redireccionar
-                    }, 200);
                 }, false)
             })
     })()
