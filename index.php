@@ -7,7 +7,7 @@
     <title>Manual de Usuario - Web Estáticos</title>
     <!-- Bootstrap para mejor estética -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="assets/pepook.jpg" sizes="32x32" />
+    <link rel="icon" type="image/png" href="assets/img//pepook.jpg" sizes="32x32" />
     <style>
         body {
             background: #f8f9fa;
