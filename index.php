@@ -19,7 +19,7 @@
             margin-top: 1.5rem;
         }
 
-        .Indice,
+
         .Introduccion,
         .Descripcion,
         .login,
@@ -62,17 +62,49 @@
         <h1 class="text-center mb-4">Manual para el Usuario de Administración de la Web Estáticos</h1>
 
         <!-- Indice -->
-        <div class="Indice">
-            <h2>Índice</h2>
-            <ul>
-                <li>Introducción</li>
-                <li>Páginas Web y usos</li>
-                <li>Manejo interno</li>
-            </ul>
-        </div>
+        <div class="Indice" style="position: relative;">
 
+            <!-- Botón fijo en el lateral izquierdo -->
+            <button id="abrirIndiceBtn" class="btn btn-outline-primary"
+                style="position: fixed; top: 120px; left: 0; z-index: 2000; border-radius: 0 30px 30px 0; padding-left: 12px; padding-right: 18px;">
+                ☰
+            </button>
+            <!-- Menú lateral oculto -->
+            <div id="indiceLateral" style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 260px;
+        background: #fff;
+        box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+        padding: 2rem 1rem 1rem 1.5rem;
+        z-index: 2050;
+        transform: translateX(-100%);
+        transition: transform 0.3s;
+    ">
+                <button type="button" class="btn-close mb-3" aria-label="Cerrar" id="cerrarIndiceBtn"></button>
+                <h5>Índice</h5>
+                <ul>
+                    <li><a href="#introduccion" onclick="cerrarIndice()">Introducción</a></li>
+                    <li><a href="#paginas-web-y-usos" onclick="cerrarIndice()">Páginas Web y usos</a></li>
+                    <li><a href="#manejo-interno" onclick="cerrarIndice()">Manejo interno</a></li>
+                </ul>
+            </div>
+            <script>
+                const abrirBtn = document.getElementById('abrirIndiceBtn');
+                const cerrarBtn = document.getElementById('cerrarIndiceBtn');
+                const indiceLateral = document.getElementById('indiceLateral');
+                abrirBtn.onclick = () => indiceLateral.style.transform = 'translateX(0)';
+                cerrarBtn.onclick = () => indiceLateral.style.transform = 'translateX(-100%)';
+
+                function cerrarIndice() {
+                    indiceLateral.style.transform = 'translateX(-100%)';
+                }
+            </script>
+        </div>
         <!-- Introducción -->
-        <div class="Introduccion">
+        <div id="introduccion">
             <h2>Introducción</h2>
             <p>El objetivo de esta documentación es que el administrador a cargo de esta web adquiera los conocimientos necesarios para lograr un uso correcto de la misma.</p>
             <p>Los conocimientos básicos para un manejo óptimo de esta web son: <b>Manejo en BD, PHP, HTML</b>.</p>
@@ -102,7 +134,7 @@
             <img src="assets/mensajes.JPG" alt="mensajes">
         </div>
 
-        <h1 class="text-center">Páginas de la web</h1>
+        <h1 id="paginas-web-y-usos" class="text-center">Páginas web y usos</h1>
         <div class="desplegable">
             <h3><i><b>Páginas de la Web</b></i></h3>
             <p>A la izquierda del botón <i>Iniciar Sesión</i>, verá el botón de menú desplegable NAV. Si pulsa en él, se desplegarán los enlaces a las diferentes páginas de la web.</p>
@@ -138,7 +170,7 @@
         </div>
 
         <!-- Manejo interno -->
-        <h1 class="text-center">Manejo interno</h1>
+        <h1 id="manejo-interno" class="text-center">Manejo interno</h1>
         <h3>Árbol de carpetas y el porqué de cada una</h3>
         <i>Al menos las más destacables</i>
         <p><i>Árbol de Directorios</i></p>
