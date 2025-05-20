@@ -96,7 +96,7 @@
                     <li><a href="#paginas-web-y-usos" onclick="cerrarIndice()"><b>Páginas Web y usos</b></a></li>
                     <ol>
                         <li><a href="#paginadelaweb" onclick="cerrarIndice()">Paginas de la web</a></li>
-
+                        <li><a href="#inicio" onclick="cerrarIndice()">Inicio</a></li>
                         <li><a href="#quienes-somos" onclick="cerrarIndice()">Quiénes somos</a></li>
                         <li><a href="#contacto" onclick="cerrarIndice()">Contacto</a></li>
                         <li><a href="#catalogo" onclick="cerrarIndice()">Catálogo</a></li>
@@ -104,11 +104,10 @@
                     </ol>
                     <li><a href="#manejo-interno" onclick="cerrarIndice()"><b>Manejo interno</b></a></li>
                     <ol><!--terceraseccion-->
-                        <li>
-                            <a href="#arbolcarpetas" onclick="cerrarIndice()">Árbol de carpetas</a>
-                        </li>
+                        <li><a href="#arbolcarpetas" onclick="cerrarIndice()">Árbol de carpetas</a></li>
 
-                        <li><a href="#creacion-de-paginas" onclick="cerrarIndice()">Creación de páginas</a>
+                        <li><a href="#creacion-de-paginas" onclick="cerrarIndice()">Creación de páginas</a></li>
+                        <li><a href="#mod-paginas" onclick="cerrarIndice()">Modificación de páginas</a></li>
                     </ol>
                 </ul>
             </div>
@@ -161,7 +160,7 @@
             <p>A la izquierda del botón <i>Iniciar Sesión</i>, verá el botón de menú desplegable NAV. Si pulsa en él, se desplegarán los enlaces a las diferentes páginas de la web.</p>
             <img src="assets/botonesnav.JPG" alt="Botones del Nav">
 
-            <h3>Inicio</h3>
+            <h3 id="inicio">Inicio</h3>
             <p><i>Una pantalla anteriormente mostrada</i>. Será la primera página que vea el usuario.</p>
             <img src="assets/pantallainicio.JPG" alt="Inicio">
 
@@ -196,7 +195,7 @@
         <i>Al menos las más destacables</i>
         <p><i>Árbol de Directorios</i></p>
         <img src="assets/treeDIR.JPG" alt="arbol de carpetas">
-        <!--etoymodificandoestahora --> <!--etoymodificandoestahora -->
+
         <h3 id="creacion-de-paginas">Creacion de paginas</h3>
         <p>En esta parte explicaremos la manera de crear una pagina, añadirla a la web, y hacer que tenga una <i>url</i> amigable.</p>
         <ul>
@@ -231,6 +230,22 @@ $menu->agregarItem("Catalogo", "catalogo", "catalogo");
         ],             
 
 </code></pre>
+        <!--en esta parte diremos com modificar la spaginas , osea com hacer que tengan elheader el  footer y todo eso -->
+        <h3 id="mod-paginas">Modificacion de paginas</h3>
+        <p>En este apartado se mostrara como se incluye una cabecera y un pie de pagina de forma global, tienes que usar los dos archivos dentro de <I>Views/Layouts/</I>
+
+        </p><img src="assets/HF.JPG" alt="imagen de la carpetas layout y demas">
+
+        <p><b>Pagina de error</b></p>
+        <p>Si algun dia una de estas paginas fallara,dentro de routes, redireccionamos a un archivo 404, de esta manera, el propio archivo esta tambien dentro de <i>Views</i> .
+        <pre><code>
+          return [
+            'pagina' => '404',
+            'titulo_pagina' => 'Página no encontrada',
+            'view' => 'views/404.php',
+            'parametro' => null
+    </code></pre>
+        </p>
     </div>
 </body>
 
