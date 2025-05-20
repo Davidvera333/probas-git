@@ -232,12 +232,23 @@ $menu->agregarItem("Catalogo", "catalogo", "catalogo");
 </code></pre>
         <!--en esta parte diremos com modificar la spaginas , osea com hacer que tengan elheader el  footer y todo eso -->
         <h3 id="mod-paginas">Modificacion de paginas</h3>
-        <p>En este apartado se mostrara como se incluye una cabecera y un pie de pagina de forma global, tienes que usar los dos archivos dentro de <I>Views/Layouts/</I>
-
-        </p><img src="assets/HF.JPG" alt="imagen de la carpetas layout y demas">
-
+        <p>En este apartado se mostrara como se incluye una cabecera y un pie de pagina de forma global, tienes que usar los dos archivos dentro de <i>Views/Layouts/</i></p>
+        <img src="assets/HF.JPG" alt="imagen de la carpetas layout y demas">
+        <p>El archivo footer.php incluye un cuerpo html basico sin mas <i>
+                <pre><code>footer piepagina footer</code></pre>
+            </i></p>
+        <p>El header incluye ya mas codigo , ya que es un menu desplegable</p>
+        <img src="assets/header.JPG" alt="imagen de la cabecera">
+        <p>La manera de <i>Invocarlos</i> , osea que aparezcan en los demas archivos seria asi.</p>
+        <pre><code>  
+  include_once 'views/layouts/header1.php';
+  ?php include $view; ?>
+  ?php
+  include_once 'views/layouts/footer.php';
+  ?>
+</code></pre>
         <p><b>Pagina de error</b></p>
-        <p>Si algun dia una de estas paginas fallara,dentro de routes, redireccionamos a un archivo 404, de esta manera, el propio archivo esta tambien dentro de <i>Views</i> .
+        <p>Si algun dia una de estas paginas fallara, dentro de routes, esto redirecciona a un archivo 404, <i>el propio codigo esta dentro de routes</i> .
         <pre><code>
           return [
             'pagina' => '404',
